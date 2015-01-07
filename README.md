@@ -1,5 +1,5 @@
 # PseudoRandomBackoff
-A new random backoff generation for CSMA/ECA with multiple ACs.i
+A new random backoff generation for CSMA/ECA with multiple ACs.
 
 Here, nodes pick a random backoff that is different to the ones already being used.
 Plus, it makes sure that the randomly chosen backoff does not collide with eventual
