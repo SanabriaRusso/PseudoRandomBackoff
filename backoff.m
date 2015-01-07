@@ -10,6 +10,7 @@ function [newCounter, iterations] = backoff(i,counters, stages, CWmin)
     newCounter = randi(2^stages(i)*CWmin(i));
     for j = ACs
         if(j ~= i)
+%             Checks if the newCounter will eventually collide with a successful AC
             futureCycles(j) = mod( abs((2^stages(j)*CWmin(j))/2 - newCounter), min((2^stages(j)*CWmin(j))/2, newCounter) );
         end
     end
